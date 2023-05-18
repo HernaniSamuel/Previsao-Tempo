@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do tempo</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Previsão do Tempo</h1>
+        <form autocomplete="off">
+            <input type="text" name="pesquisa" id="pesquisa" placeholder="São Paulo" required>
+            <input type="submit" value="Buscar" id="buscar">
+        </form>
+
+        <section class="location-info">
+            <h2>Localização</h2>
+            <p>Cidade: <span id="cidade">Pesquise apenas o nome da cidade</span></p>
+            <p>Estado: <span id="estado">Sem por o UF</span></p>
+            <p>País: <span id="pais">Nem o país</span></p>
+            <p>Hora Local: <span id="hora">0</span></p>
+        </section>
+
+        <section class="current-weather">
+            <h2>Informações Atuais</h2>
+            <p>Temperatura Atual: <span id="temperatura-atual">0</span>°C</p>
+            <p>Descrição do Tempo: <span id="descricao-tempo">0</span></p>
+            <img id="icone-tempo" src="https://tse2.mm.bing.net/th?id=OIP.m71cxaxSJr8D4qgx5B5QwgHaIT&pid=Api&P=0&h=180" alt="Ícone do Tempo" width="50px">
+            <p>Vento: <span id="velocidade-vento">0</span> km/h, direção <span id="direcao-vento">0</span> (<span id="grau-vento">0</span>°)</p>
+            <p>Umidade do Ar: <span id="umidade-ar">0</span>%</p>
+            <p>Precipitação: <span id="precipitacao">0</span> mm</p>
+        </section>
+        
+        <section class="forecast">
+            <h2>Previsão para Hoje</h2>
+            <p>Temperatura Máxima: <span id="temperatura-maxima">0</span>°C</p>
+            <p>Temperatura Mínima: <span id="temperatura-minima">0</span>°C</p>
+            <p>Descrição Geral: <span id="descricao-geral">0</span></p>
+            <p>Precipitação Esperada: <span id="precipitacao-esperada">0</span> mm</p>
+        </section>
+        
+        <section class="additional-info">
+            <h2>Outras Informações</h2>
+            <p>Índice UV: <span id="indice-uv">0</span></p>
+            <p>Vento Máximo: <span id="vento-maximo">0</span> km/h</p>
+            <p>Visibilidade Prevista: <span id="visibilidade-prevista">0</span> km</p>
+            <p>Fases da Lua: <span id="fases-lua">0</span></p>
+        </section>
+    </div>
+    
+    <script src="static/script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.container{
+    text-align: center;
+    max-width: 800px;
+    margin:auto;
+}
+div.container > h1{
+    margin:10px;
+    padding:10px;
+}
+div.container > form > #pesquisa{
+    margin:10px;
+    padding:10px;
+    width:60%;
+    border: none;
+    border-bottom:2px solid rgb(0, 0, 0);
+    font-size: 1.4em;
+}
+div.container > form > input#buscar{
+    padding:10px;
+    background-color: white;
+    border:1px solid black;
+    color:black;
+    border-radius: 10px;
+}
+
+section.location-info, section.current-weather, section.forecast, section.additional-info{
+    margin:10px auto;
+    padding:10px;
+    text-align: left;
+    width:90%;
+}
+section.location-info > h2, section.current-weather > h2, section.forecast > h2, section.additional-info > h2{
+    text-align: center;
+}
+section.location-info > p, section.current-weather > p, section.forecast > p, section.additional-info > p{
+    margin:10px;
+    font-size:1.2em;
+}
+
+section.current-weather, section.forecast, section.additional-info{
+    border-top: 1px solid black;
+}
+
+section.current-weather > img{
+    display:block;
+    margin:auto;
+}
+
+span{
+    color:blue;
+}
