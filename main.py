@@ -1,10 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 import requests
-from dotenv import load_dotenv
-import os
-
-# carrega variáveis de ambiente do arquivo .env
-load_dotenv()
 
 # inicialização do app Flask
 app = Flask(__name__)
@@ -14,7 +9,7 @@ def requisicao_dia(cidade): # Função para pegar os dados da API
     # dados iniciais
     url_base = 'http://api.weatherapi.com/v1'
     metodo_api = '/forecast.json'
-    chave_api = os.getenv('API_KEY')
+    chave_api = '98492e51f99b4760aa5115145231305'
 
     # Parâmetros da API
     params = {
